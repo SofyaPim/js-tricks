@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Посчитайка</h1>
+        <div class="social-icons">
+            <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
+                    srcset=""> </a>
+            <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
+                    srcset=""></a>
+            <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
+                    srcset=""></a>
+            <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
+                    srcset=""></a>
+        </div>
+        <div class="reg-auth">
+            <a href="reg.html">регистрация</a>
+            <a href="">авторизация</a>
+        </div>
+    </header>
+    <div class="main">
+        <img src="/math-math-dog.jpg" alt="" srcset="">
+        <div class="math">
+            <input type="text" id="input" placeholder="Введите число!">
+            <button onclick="buttonClick()">cколько в квадрате</button>
+        </div>
+
+    </div>
+    <div class="search-in-wiki">
+        <h2>найди в википедии</h2>
+        <iframe src="http://wikipedia.com" width="900" height="300">
+        </iframe>
+    </div>
+    <div class="questions">
+        <h2>ваши вопросы и пожелания</h2>
+        <input type="text" placeholder="введите текст">
+        <input type="submit" value="отправить">
+
+    </div>
+
+
+
+
+    <script>
+        // var name = prompt('Ваше имя?');
+        // alert('Ваше имя: '+name)
+
+        //     var obj = {'Коля':'1000', 'Вася':'500', 'Петя':'200'};
+        // alert(obj['Коля']);
+        function buttonClick() {
+            var input = document.getElementById('input');
+            var number = Number(input.value);
+            var square = number * number;
+            alert(square);
+        }
+    </script>
+</body>
+
+</html>

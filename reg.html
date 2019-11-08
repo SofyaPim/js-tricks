@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style-reg.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Посчитайка</h1>
+        <div class="social-icons">
+            <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
+                    srcset=""> </a>
+            <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
+                    srcset=""></a>
+            <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
+                    srcset=""></a>
+            <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
+                    srcset=""></a>
+        </div>
+        <div class="reg-auth">
+            <a href="index.html">на главную</a>
+            <a href="">авторизация</a>
+        </div>
+    </header>
+    <div class="main-reg">
+        <h2>регистрируемся</h2>
+        <div class="form-wrapper">
+        <form method="post" autocomplete="off" action="reg.php">
+
+            <p> <label for="userName">Имя: </label></p>
+                <input type="text" name="userName" placeholder="Введите имя" size="20"  autofocus/>
+
+            <p> <label for="login">Логин: </label></p>
+                <input name="login" type="text" placeholder="login" size="20" />
+            <p> <label for="password">Пароль: </label></p>
+                <input name="password" type="password" placeholder="password" size="20" /> 
+            <p><label for="userPhone">Телефон: </label></p>
+                <input type="text" name="userPhone" placeholder="Введите номер телефона" size="20" maxlength="11" />
+            <p><label for="userEmail">Email: </label></p>
+                <input type="email" name="userEmail" placeholder="Введите номер телефона" size="20" maxlength="11" />
+            
+            <h2>Укажите пол</h2>
+			<p>
+				<input type="radio" value="man" checked name="gender"/>мужской
+			</p>
+			<p>
+				<input type="radio" value="woman" name="gender"/>женский
+			</p>
+            <p><input type="submit" name="submit" size="20" /></p>
+            <p><input type="reset" value="отмена" size="20"></p>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
