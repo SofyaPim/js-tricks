@@ -1,0 +1,158 @@
+$border:2px solid rgb(24, 105, 92);
+$backgroundColor: rgb(143, 207, 209);
+
+@mixin background () {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+@mixin columnCenter() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    margin: 0 auto;
+
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    height: 50px;
+    background: linear-gradient(rgb(245, 242, 237), rgb(26, 122, 98));
+
+    a img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.main {
+    width: inherit;
+    height: 600px;
+    position: relative;
+    @include background();
+    background-image: url("/math-math-dog.jpg");
+}
+
+.main-reg {
+    background-image: url('../math-dog.jpg');
+    @include background();
+}
+
+h1 {
+    $backgroundColor: rgb(143, 207, 209);
+    text-shadow: 2px 2px 3px rgb(250, 245, 245),
+        -1px 1px 1px rgb(179, 28, 28);
+    color: rgb(38, 119, 115);
+    margin-top: 0;
+    font-style: italic;
+    font-size: 3em;
+}
+
+.questions {
+
+    @include columnCenter();
+
+    input {
+        width: 500px;
+        height: 100px;
+        border: $border;
+    }
+
+    input[type="submit"] {
+        border: $border;
+        height: 37px;
+        width: 504px;
+    }
+}
+
+
+
+
+
+h2 {
+    color: rgb(247, 242, 240);
+    letter-spacing: 0.7em;
+    text-shadow: 3px 0 rgba(250, 111, 142, .5), 6px 0 rgba(250, 111, 142, .4), 9px 0 rgba(250, 111, 142, .3), 12px 0 rgba(250, 111, 142, .2), 15px 0 rgba(250, 111, 142, .1);
+    background-color: $backgroundColor;
+    margin: 0;
+    
+}
+
+.social-icons {
+    margin-top: 0.5%;
+}
+
+.main__count {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    display: flex;
+    flex-direction: row;
+    color: #0000;
+    width: auto;
+    height: 50px;
+    justify-content: flex-end;
+    background-color: $backgroundColor;
+
+    input,
+    button {
+        width: 150px;
+        height: 70px;
+        color: blueviolet;
+        background-color: azure;
+        align-self: center;
+        text-align: center;
+        font-size: large;
+        border: 2px solid rgb(212, 129, 20);
+    }
+
+}
+
+
+.search-in-wiki {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $backgroundColor;
+    
+
+}
+
+
+input[type="image"] {
+    width: 80px;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.form-wrapper {
+    width: 500px;
+    @include columnCenter();
+    color: blanchedalmond;
+    margin-left: 54%;
+    font-size: 1.5em;
+    background-color: $backgroundColor;
+
+    input {
+        border: 2px solid blanchedalmond;
+        font-size: 1em;
+        margin: 2%;
+    }
+}
+
+
+
+a {
+    color: blanchedalmond;
+    font-style: normal;
+    font-size: 1.5em;
+}
