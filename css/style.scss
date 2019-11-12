@@ -41,10 +41,21 @@ header {
     @include background();
     background-image: url("/math-math-dog.jpg");
 }
-
-.main-reg {
-    background-image: url('../math-dog.jpg');
+.reg-auth{
+    width: 60%;
+    position: absolute;
+    top:5%;
+    left:10%;
     @include background();
+    @include columnCenter();
+    z-index: 99;
+}
+.reg-auth__form {
+    display: none;
+    
+    @include background();
+    position: absolute;
+
 }
 
 h1 {
@@ -151,8 +162,3 @@ input[type="image"] {
 
 
 
-a {
-    color: blanchedalmond;
-    font-style: normal;
-    font-size: 1.5em;
-}
