@@ -157,7 +157,7 @@ input[type="image"] {
 
 
 .Background {
-    background-image: url("/images/math-math-dog.jpg");
+    background-image: url("../images/math-math-dog.jpg");
     @include background();
     color: $color;
     text-shadow: $backgroundColor;
@@ -171,7 +171,7 @@ input[type="image"] {
 }
 
 .newBackground {
-    background-image: url("/images/math-dog.jpg");
+    background-image: url("../images/math-dog.jpg");
     @include background();
  font-family: "BalsamItal";
     color: $backgroundColor;
