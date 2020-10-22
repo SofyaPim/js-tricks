@@ -1,10 +1,19 @@
+@font-face{
+    font-family: "BalsamReg";
+    src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
+}
+@font-face{
+    font-family: "BalsamItal";
+    src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
+    font-style: italic;
+}
 $border:2px solid rgb(40, 154, 230);
 $backgroundColor: rgb(22, 48, 49);
 $color: rgb(224, 224, 32);
 $lightcolor:rgb(224, 237, 241);
 
 :root {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "BalsamReg", sans-serif;
     font-size: 1.3rem;
 
 }
@@ -148,11 +157,11 @@ input[type="image"] {
 
 
 .Background {
-    background-image: url("/math-math-dog.jpg");
+    background-image: url("/images/math-math-dog.jpg");
     @include background();
     color: $color;
     text-shadow: $backgroundColor;
-
+    font-family: "BalsamReg";
     input,
     button {
         background-color: $color;
@@ -162,9 +171,9 @@ input[type="image"] {
 }
 
 .newBackground {
-    background-image: url("/math-dog.jpg");
+    background-image: url("/images/math-dog.jpg");
     @include background();
-    font-style: italic;
+ font-family: "BalsamItal";
     color: $backgroundColor;
 
     input,
@@ -190,5 +199,8 @@ input[type="image"] {
             @include columnCenter();
        align-items: center;
         }
+    }
+    .main__count{
+        align-items: flex-end;
     }
 }

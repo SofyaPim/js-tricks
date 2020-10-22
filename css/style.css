@@ -1,5 +1,16 @@
+@font-face {
+  font-family: "BalsamReg";
+  src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "BalsamItal";
+  src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
+  font-style: italic;
+}
+
 :root {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "BalsamReg", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -148,7 +159,7 @@ input[type="image"] {
 }
 
 .Background {
-  background-image: url("/math-math-dog.jpg");
+  background-image: url("/images/math-math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,6 +167,7 @@ input[type="image"] {
           filter: blur(67%);
   color: #e0e020;
   text-shadow: #163031;
+  font-family: "BalsamReg";
 }
 
 .Background input,
@@ -165,13 +177,13 @@ input[type="image"] {
 }
 
 .newBackground {
-  background-image: url("/math-dog.jpg");
+  background-image: url("/images/math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-filter: blur(67%);
           filter: blur(67%);
-  font-style: italic;
+  font-family: "BalsamItal";
   color: #163031;
 }
 
@@ -211,5 +223,11 @@ input[type="image"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.newBackground .main__count {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 /*# sourceMappingURL=style.css.map */
