@@ -1,8 +1,18 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+}
+
 body {
   margin: 0 auto;
 }
 
-header {
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,66 +23,66 @@ header {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f5f2ed), to(#1a7a62));
-  background: linear-gradient(#f5f2ed, #1a7a62);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  background: -webkit-gradient(linear, left top, left bottom, from(#163031), to(#f5f2ed));
+  background: linear-gradient(#163031, #f5f2ed);
+  padding: 1.5rem;
 }
 
-header a img {
+.header a img {
   width: 40px;
   height: 40px;
 }
 
-.main {
-  width: inherit;
-  height: 600px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("/math-math-dog.jpg");
-}
-
-.reg-auth {
-  width: 60%;
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 99;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.themeButton {
+  border: 2px solid #289ae6;
+  padding: 0.5rem;
+}
+
+.main {
+  width: inherit;
+  position: relative;
 }
 
 .reg-auth__form {
   display: none;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: absolute;
+  z-index: 99;
 }
 
-h1 {
-  text-shadow: 2px 2px 3px #faf5f5, -1px 1px 1px #b31c1c;
-  color: #267773;
-  margin-top: 0;
-  font-style: italic;
-  font-size: 3em;
+.reg-auth__form .form-wrapper {
+  width: auto;
+  background-color: #163031;
 }
 
-.questions {
+.reg-auth__form .form-wrapper input {
+  background-color: #e0edf1;
+  border: 2px solid #e0edf1;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.reg-auth__form .form-wrapper form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,26 +93,16 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.questions input {
-  width: 500px;
-  height: 100px;
-  border: 2px solid #18695c;
-}
-
-.questions input[type="submit"] {
-  border: 2px solid #18695c;
-  height: 37px;
-  width: 504px;
-}
-
-h2 {
-  color: #f7f2f0;
-  letter-spacing: 0.7em;
-  text-shadow: 3px 0 rgba(250, 111, 142, 0.5), 6px 0 rgba(250, 111, 142, 0.4), 9px 0 rgba(250, 111, 142, 0.3), 12px 0 rgba(250, 111, 142, 0.2), 15px 0 rgba(250, 111, 142, 0.1);
-  background-color: #8fcfd1;
-  margin: 0;
+h1 {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+  text-shadow: 2px 2px 3px #e0edf1, -1px 1px 1px #525758;
+  font-style: italic;
 }
 
 .social-icons {
@@ -110,51 +110,35 @@ h2 {
 }
 
 .main__count {
-  position: absolute;
-  top: 60%;
-  left: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #0000;
-  width: auto;
-  height: 50px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: #8fcfd1;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
 }
 
 .main__count input,
 .main__count button {
-  width: 150px;
-  height: 70px;
-  color: blueviolet;
-  background-color: azure;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  background-color: #e0e020;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   text-align: center;
-  font-size: large;
-  border: 2px solid #d48114;
+  border: 2px solid 2px solid #289ae6;
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+.main__count .textarea {
+  background-color: #e0edf1;
 }
 
 .search-in-wiki {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  background-color: #8fcfd1;
+  width: 100vw;
+  height: 20vh;
+  background-color: #163031;
 }
 
 input[type="image"] {
@@ -163,8 +147,57 @@ input[type="image"] {
   margin-bottom: 0;
 }
 
-.form-wrapper {
-  width: 500px;
+.Background {
+  background-image: url("/math-math-dog.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(67%);
+          filter: blur(67%);
+  color: #e0e020;
+  text-shadow: #163031;
+}
+
+.Background input,
+.Background button {
+  background-color: #e0e020;
+  color: #163031;
+}
+
+.newBackground {
+  background-image: url("/math-dog.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(67%);
+          filter: blur(67%);
+  font-style: italic;
+  color: #163031;
+}
+
+.newBackground input,
+.newBackground button {
+  background-color: #163031;
+  color: #e0e020;
+}
+
+.newBackground .form-wrapper {
+  width: auto;
+  color: #e0edf1;
+  background-color: #163031;
+  z-index: 99;
+}
+
+.newBackground .form-wrapper input {
+  background-color: #e0edf1;
+  border: 2px solid #e0edf1;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.newBackground .form-wrapper form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,15 +208,8 @@ input[type="image"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: blanchedalmond;
-  margin-left: 54%;
-  font-size: 1.5em;
-  background-color: #8fcfd1;
-}
-
-.form-wrapper input {
-  border: 2px solid blanchedalmond;
-  font-size: 1em;
-  margin: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
