@@ -19,45 +19,48 @@
                 <p onclick="showRegForm()" class="themeButton">регистрация</p>
 
 
-                <div class="reg-auth__form">
 
-                    <div class="form-wrapper">
-                        <h3>регистрируемся</h3>
-                        <form>
-
-                            <label for="userName">Имя: </label>
-                            <input type="text" name="userName" placeholder="Введите имя" size="20" autofocus />
-                            <label for="login">Логин: </label>
-                            <input name="login" type="text" placeholder="login" size="20" />
-                            <label for="password">Пароль: </label>
-                            <input name="password" type="password" placeholder="password" size="20" /> 
-
-                            <label for="userEmail">Email: </label>
-                            <input type="email" name="userEmail" placeholder="Введите номер телефона" size="20"
-                                maxlength="11" />
-
-                            <h3>Укажите пол</h3>
-                            
-                                <input type="radio" value="man" checked name="gender" />мужской
-                            
-                            
-                                <input type="radio" value="woman" name="gender" />женский
-                            
-                            <input type="submit" name="submit" size="20" onclick="SubmitForm()" class="submitForm"/>
-                            <input type="reset" value="отмена" size="20" onclick="CloseForm()" class="closeForm">
-                        </form>
-                    </div>
-                </div>
 
                 <p class="themeButton" onclick="go()">Сменить тему</p>
+            </div>
+            <div class="reg-auth__form">
+
+                <div class="form-wrapper">
+                    <h3>регистрируемся</h3>
+                    <form>
+                        <div class="closeCross" onclick="CloseForm()">X</div>
+                        <label for="userName">Имя: </label>
+                        <input type="text" name="userName" placeholder="Введите имя" autofocus />
+                        <label for="login">Логин: </label>
+                        <input name="login" type="text" placeholder="login" />
+                        <label for="password">Пароль: </label>
+                        <input name="password" type="password" placeholder="password" /> 
+
+                        <label for="userEmail">Email: </label>
+                        <input type="email" name="userEmail" placeholder="Введите email" maxlength="11" />
+
+                        <h3>Укажите пол</h3>
+
+                        <input type="radio" value="man" checked name="gender" />мужской
+
+
+                        <input type="radio" value="woman" name="gender" />женский
+
+                        <input type="submit" name="submit" size="20" onclick="SubmitForm()" class="submitForm" />
+                        <input type="reset" value="отмена" size="20" onclick="CloseForm()" class="closeForm">
+                    </form>
+                </div>
             </div>
         </header>
         <div class="main">
 
             <div class="main__count">
-                <input type="text" id="input" placeholder="Введите число!" class="textarea">
-                <button onclick="getSquere()" class="countButton">cколько в квадрате</button>
-                <p class="res"></p>
+                <form>
+                    <input type="text" id="input" placeholder="Введите число!" class="textarea">
+                    <button onclick="getSquere()" class="countButton">cколько в квадрате</button>
+                    <p class="res"></p>
+                </form>
+
             </div>
             <div class="main__count">
                 <form>
@@ -69,10 +72,11 @@
             </div>
             <h2 class="h2"> википедия рядом</h2>
 
-            <iframe src="https://wikipedia.com" class="search-in-wiki">
-            </iframe>
+
 
         </div>
+        <iframe src="https://wikipedia.com" class="search-in-wiki">
+        </iframe>
         <div class="header">
             <div class="social-icons">
                 <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""

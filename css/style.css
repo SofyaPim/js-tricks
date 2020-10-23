@@ -10,8 +10,7 @@
 }
 
 :root {
-  font-family: "BalsamReg", sans-serif;
-  font-size: 1.3rem;
+  font-size: calc(1em + 1vw);
 }
 
 body {
@@ -19,8 +18,13 @@ body {
 }
 
 .wrapper {
+  font-family: "BalsamReg", sans-serif;
   width: 100vw;
   height: 100vh;
+}
+
+.wrapper input, .wrapper button {
+  font-size: calc(0.5em + 0.5vw);
 }
 
 .header {
@@ -32,13 +36,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  background: -webkit-gradient(linear, left top, left bottom, from(#163031), to(#f5f2ed));
-  background: linear-gradient(#163031, #f5f2ed);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c26f11), to(#f5f2ed));
+  background: linear-gradient(#c26f11, #f5f2ed);
   padding: 1.5rem;
 }
 
@@ -55,6 +61,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -64,7 +72,7 @@ body {
 }
 
 .themeButton {
-  border: 2px solid #289ae6;
+  border: 2px solid #d7eff7;
   padding: 0.5rem;
 }
 
@@ -76,17 +84,25 @@ body {
 .reg-auth__form {
   display: none;
   position: absolute;
+  top: 20%;
   z-index: 99;
 }
 
 .reg-auth__form .form-wrapper {
-  width: auto;
-  background-color: #163031;
+  width: calc(9em + 30vw);
+  background-color: #157968;
+  color: #d7eff7;
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+}
+
+.reg-auth__form .form-wrapper h3 {
+  text-align: center;
 }
 
 .reg-auth__form .form-wrapper input {
-  background-color: #e0edf1;
-  border: 2px solid #e0edf1;
+  background-color: #d7eff7;
+  border: 2px solid #d7eff7;
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -107,12 +123,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.reg-auth__form .form-wrapper form .closeCross {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  right: 0px;
 }
 
 h1 {
   -webkit-filter: saturate(100%);
           filter: saturate(100%);
-  text-shadow: 2px 2px 3px #e0edf1, -1px 1px 1px #525758;
+  text-shadow: 2px 2px 3px #d7eff7, -1px 1px 1px #525758;
   font-style: italic;
 }
 
@@ -133,27 +158,30 @@ h1 {
 
 .main__count input,
 .main__count button {
-  background-color: #e0e020;
+  background-color: #157968;
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: center;
-  border: 2px solid 2px solid #289ae6;
+  border: 4px solid 2px solid #d7eff7;
   border-radius: 3rem;
   padding: 1rem;
 }
 
 .main__count .textarea {
-  background-color: #e0edf1;
+  background-color: #d7eff7;
 }
 
 .h2 {
-  padding: 2rem;
+  text-shadow: 8px 8px 5px #d7eff7;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .search-in-wiki {
   width: 100vw;
   height: 20vh;
-  background-color: #163031;
+  background-color: #c26f11;
 }
 
 input[type="image"] {
@@ -169,15 +197,17 @@ input[type="image"] {
   background-repeat: no-repeat;
   -webkit-filter: blur(67%);
           filter: blur(67%);
-  color: #e0e020;
-  text-shadow: #163031;
+  color: #157968;
+  text-shadow: #c26f11;
   font-family: "BalsamReg";
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
 }
 
 .Background input,
 .Background button {
-  background-color: #e0e020;
-  color: #163031;
+  background-color: #157968;
+  color: #c26f11;
 }
 
 .newBackground {
@@ -188,25 +218,32 @@ input[type="image"] {
   -webkit-filter: blur(67%);
           filter: blur(67%);
   font-family: "BalsamItal";
-  color: #163031;
+  color: #c26f11;
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
 }
 
 .newBackground input,
 .newBackground button {
-  background-color: #163031;
-  color: #e0e020;
+  background-color: #c26f11;
+  color: #157968;
+}
+
+.newBackground .header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#157968), to(#f5f2ed));
+  background: linear-gradient(#157968, #f5f2ed);
 }
 
 .newBackground .form-wrapper {
-  width: auto;
-  color: #e0edf1;
-  background-color: #163031;
+  width: calc(9em + 10vw);
+  color: #d7eff7;
+  background-color: #c26f11;
   z-index: 99;
 }
 
 .newBackground .form-wrapper input {
-  background-color: #e0edf1;
-  border: 2px solid #e0edf1;
+  background-color: #d7eff7;
+  border: 2px solid #d7eff7;
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
