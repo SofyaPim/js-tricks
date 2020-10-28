@@ -2,6 +2,11 @@
   background-color: #157968;
 }
 
+.faq-wrapper h2 {
+  text-align: center;
+  margin: 0;
+}
+
 .faq-quest {
   margin: 0;
   font-size: .7rem;
