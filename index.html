@@ -27,20 +27,14 @@
                         <label for="userName">Имя: </label>
                         <input type="text" name="userName" placeholder="Введите имя" required />
                         <label for="login">Логин: </label>
-                        <input name="login" type="text" placeholder="login" required/>
+                        <input name="login" type="text" placeholder="login" required />
                         <label for="password">Пароль: </label>
-                        <input name="password" type="password" placeholder="password" required/> 
-
+                        <input name="password" type="password" placeholder="password" required /> 
                         <label for="userEmail">Email: </label>
-                        <input type="email" name="userEmail" placeholder="Введите email" maxlength="11" required/>
-
+                        <input type="email" name="userEmail" placeholder="Введите email" maxlength="11" required />
                         <h3>Укажите пол</h3>
-
-                        <input type="radio" value="man" checked name="gender" />мужской
-
-
-                        <input type="radio" value="woman" name="gender" />женский
-
+                        <input type="radio" checked name="gender" />мужской
+                        <input type="radio" name="gender" />женский
                         <input type="submit" name="submit" size="20" onclick="SubmitForm()" class="submitForm button" />
                         <input type="reset" value="отмена" size="20" onclick="CloseForm()" class="closeForm button">
                     </form>
@@ -80,19 +74,12 @@
                     </div>
                 </div>
             </div>
-<div class="section">
-    <h2 class="h2"> википедия рядом</h2>
-            <iframe src="https://wikipedia.com" rel="notFollow" class="search-in-wiki" >
-            </iframe>
-</div>
-            
-
-
         </div>
         <div class="faq-wrapper">
             <h2 class="faq-quest">Стоит ли отказываться от jQuery?</h2>
             <div class="faq-answer displayNone">
-                <p>нативный JS не сложно освоить, тем более что весит он меньше и  выполняет те же операции намного быстрее</p>
+                <p>нативный JS не сложно освоить, тем более что весит он меньше и выполняет те же операции намного
+                    быстрее</p>
             </div>
             <h2 class="faq-quest">Как обойтись без $?</h2>
             <div class="faq-answer displayNone">
@@ -112,27 +99,27 @@
                 </p>
             </div>
         </div>
-    
-    <footer class="footer">
-        <div class="section">
-            <form>
-                <h4>ваши вопросы и пожелания</h4>
-                <input type="textarea" placeholder="введите текст" class="textarea" required>
-                <input type="submit" value="отправить" class="button">
-            </form>
 
-        </div>
-        <div class="social-icons">
-            <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
-                    srcset=""> </a>
-            <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
-                    srcset=""></a>
-            <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
-                    srcset=""></a>
-            <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
-                    srcset=""></a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="section">
+                <form>
+                    <h4>ваши вопросы и пожелания</h4>
+                    <input type="textarea" placeholder="введите текст" class="textarea" required>
+                    <input type="submit" value="отправить" class="button">
+                </form>
+
+            </div>
+            <div class="social-icons">
+                <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
+                        srcset=""> </a>
+                <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
+                        srcset=""></a>
+                <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
+                        srcset=""></a>
+                <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
+                        srcset=""></a>
+            </div>
+        </footer>
     </div>
 
     <script src="scripts/main.js"></script>

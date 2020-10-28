@@ -11,9 +11,9 @@
 
 $border:2px solid rgb(215, 239, 247);
 $backgroundColor: rgb(194, 17, 91);
-$color: rgb(21, 121, 104);
+$color: rgb(23, 56, 51);
 $lightcolor:rgb(234, 245, 243);
-$activeBack:rgb(34, 78, 71);
+$activeBack:rgb(35, 202, 174);
 
 
 
@@ -34,11 +34,13 @@ $activeBack:rgb(34, 78, 71);
     flex-direction: column;
     justify-content: center;
 }
+
 @mixin flexRow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 body {
     margin: 0 auto;
 
@@ -46,7 +48,7 @@ body {
 
 .wrapper {
     font-family: "BalsamReg", sans-serif;
-  width: 100vw;
+    width: 100vw;
     height: 100vh;
     background-color: $lightcolor;
 
@@ -58,13 +60,13 @@ body {
 
 .header,
 .footer {
-   
+
     @include flexRow();
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
     background: linear-gradient($backgroundColor, rgb(245, 242, 237));
-border: $border;
+    border: $border;
 
     a img {
         width: 40px;
@@ -90,13 +92,13 @@ border: $border;
 .reg-auth__form {
     display: none;
     position: absolute;
-    top: 20%;
+    top: 5%;
     z-index: 99;
 
     .form-wrapper {
-        width: calc(9em + 30vw);
-        background-color: $color;
-        color: $lightcolor;
+        width: calc(9em + 50vw);
+        background-color: $lightcolor;
+        color: $color;
 
         h3 {
             text-align: center;
@@ -106,12 +108,17 @@ border: $border;
 
         input {
             background-color: $lightcolor;
-            border: 2px solid $lightcolor;
+            border: 2px solid $activeBack;
             margin-bottom: 1rem;
             border-radius: 1rem;
             padding: 0.5rem;
         }
-
+        input[type="radio"]{
+            border: 0px;
+    width: 100%;
+    height: 2em;
+    color: $activeBack;
+        }
         form {
             width: 100%;
             @include columnCenter();
@@ -144,12 +151,13 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem 2rem 2rem;
-background-color: $lightcolor;
-border: 4px solid $lightcolor;
-border-image: url("/images/math-dog.jpg") 30 round round;
+    background-color: $lightcolor;
+    border: 4px solid $lightcolor;
+    border-image: url("/images/math-dog.jpg") 30 round round;
+
     input,
     button {
-        background-color: $color;
+        background-color: $activeBack;
         align-self: flex-start;
         text-align: center;
         border: 4px solid $border;
@@ -166,50 +174,58 @@ border-image: url("/images/math-dog.jpg") 30 round round;
     background-color: $activeBack;
 
 }
-.events{
-    
- .capture__wrap{
-    
-background-color: $color;
 
-padding: 20px;
-&__div{
-    
-    background-color: $lightcolor;
-    padding: 20px;
-    &__ul{
-        
-        background-color: $color;
+.events {
+
+    .capture__wrap {
+        margin-bottom: 2rem;
+        background-color: $activeBack;
+
         padding: 20px;
-        &__li{
-           
+
+        &__div {
+
             background-color: $lightcolor;
             padding: 20px;
-        }
-    }
-}
- }
- .bubble__wrap{
-    
-    background-color: $color;
-    
-    padding: 20px;
-    &__div{
-        
-        background-color: $lightcolor;
-        padding: 20px;
-        &__ul{
-            
-            background-color: $color;
-            padding: 20px;
-            &__li{
-               
-                background-color: $lightcolor;
+
+            &__ul {
+
+                background-color: $activeBack;
                 padding: 20px;
+
+                &__li {
+
+                    background-color: $lightcolor;
+                    padding: 20px;
+                }
             }
         }
     }
-     }
+
+    .bubble__wrap {
+
+        background-color: $activeBack;
+
+        padding: 20px;
+
+        &__div {
+
+            background-color: $lightcolor;
+            padding: 20px;
+
+            &__ul {
+
+                background-color: $activeBack;
+                padding: 20px;
+
+                &__li {
+
+                    background-color: $lightcolor;
+                    padding: 20px;
+                }
+            }
+        }
+    }
 }
 
 .h2 {
@@ -229,32 +245,32 @@ padding: 20px;
 
 
 .Background {
-    .header{
+    .header {
         background-image: url("../images/math-math-dog.jpg");
-       @include background();
+        @include background();
     }
-    
-   
+
+
     color: $color;
     text-shadow: 2px 2px 5px $lightcolor;
     font-family: "BalsamReg";
-  
+
 
     input,
     button {
-        background-color: $color;
+        background-color: $activeBack;
         color: $backgroundColor;
     }
 
 }
 
 .newBackground {
-    .header{
+    .header {
         background-image: url("../images/math-dog.jpg");
-      @include background();
+        @include background();
     }
-    
-  
+
+
     font-family: "BalsamItal";
     color: $backgroundColor;
     text-shadow: 2px 2px 5px $lightcolor;
@@ -265,7 +281,7 @@ padding: 20px;
         color: $color;
     }
 
-    
+
     .form-wrapper {
         width: calc(9em + 10vw);
 
@@ -292,6 +308,56 @@ padding: 20px;
     .main__count {
         align-items: flex-end;
     }
+
+    .capture__wrap {
+
+        background-color: $backgroundColor;
+
+        padding: 20px;
+
+        &__div {
+
+            background-color: $lightcolor;
+            padding: 20px;
+
+            &__ul {
+
+                background-color: $backgroundColor;
+                padding: 20px;
+
+                &__li {
+
+                    background-color: $lightcolor;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .bubble__wrap {
+
+        background-color: $backgroundColor;
+
+        padding: 20px;
+
+        &__div {
+
+            background-color: $lightcolor;
+            padding: 20px;
+
+            &__ul {
+
+                background-color: $backgroundColor;
+                padding: 20px;
+
+                &__li {
+
+                    background-color: $lightcolor;
+                    padding: 20px;
+                }
+            }
+        }
+    }
 }
 
 .social-icons {
@@ -301,20 +367,25 @@ padding: 20px;
 .footer {
     @include flexRow();
     align-items: center;
+
     .section {
         background-color: rgba(255, 255, 255, 0.027);
         padding: 0;
         border: rgba(255, 255, 255, 0);
     }
-    h4{
+
+    h4 {
         margin: 0;
     }
 }
+
 .themeButton {
     border: $border;
     padding: 0.5rem;
 
 }
-.highlight{
-    border: 10px solid $activeBack;
+
+.highlight {
+    border: 10px solid $color;
+    
 }
