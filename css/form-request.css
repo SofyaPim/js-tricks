@@ -56,6 +56,7 @@
   border: 3px solid #23caae;
   border-radius: .5rem;
   padding: 20px;
+  width: 80vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: all 1s;
@@ -111,7 +112,7 @@
 .form-request-popup-content form input {
   margin-bottom: 20px;
   font-size: 1rem;
-  padding: 1.5vw 10vw;
+  padding: 1.5vw 1vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

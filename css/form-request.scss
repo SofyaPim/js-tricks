@@ -55,7 +55,7 @@ $activeBack:rgb(35, 202, 174);
     border: 3px solid $activeBack;
     border-radius: .5rem;
     padding: 20px;
-  
+  width: 80vw;
     box-sizing: border-box;
     transition: all 1s;
 }
@@ -105,7 +105,7 @@ opacity: 95%;
         input {
             margin-bottom: 20px;
             font-size: 1rem;
-            padding: 1.5vw 10vw;
+            padding: 1.5vw 1vw;
             align-self: center;
             background-color: $lightcolor;
             border: 1px solid $activeBack;
