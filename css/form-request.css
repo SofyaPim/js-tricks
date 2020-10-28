@@ -35,12 +35,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
   z-index: 1;
   left: 7%;
-  top: 10%;
+  top: 90%;
 }
 
 .form-request-popup-close {

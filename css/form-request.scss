@@ -29,13 +29,12 @@ $activeBack:rgb(35, 202, 174);
 .form-request-popup {
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    
 
     z-index: 1;
     left: 7%;
-    top: 10%;
+    top: 90%;
     
 }
 
