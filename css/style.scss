@@ -1,11 +1,11 @@
 @font-face {
     font-family: "BalsamReg";
-    src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
+    src: url("fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
     font-family: "BalsamItal";
-    src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
+    src: url("fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
     font-style: italic;
 }
 
@@ -49,15 +49,21 @@ body {
 
 .wrapper {
     font-family: "BalsamReg", sans-serif;
-    width: 90vw;
-    height: 100vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
     background-color: $lightcolor;
-    margin: 0 auto;
-
+   
+border: 2px solid $color;
     input,
     button {
         font-size: calc(0.5em + 0.5vw);
     }
+}
+
+.header {
+    margin-top: .5rem;
+    padding-top: 6rem;
 }
 
 .header,
@@ -67,8 +73,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-  
-    border: $border;
+
+    
 
     a img {
         width: 40px;
@@ -80,6 +86,16 @@ body {
     @include flexRow();
     align-items: baseline;
     justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        color: $color;
+        margin-right: 1.5rem;
+    }
+
+    a:hover {
+        color: $activeBack;
+    }
 }
 
 
@@ -115,12 +131,14 @@ body {
             border-radius: 1rem;
             padding: 0.5rem;
         }
-        input[type="radio"]{
+
+        input[type="radio"] {
             border: 0px;
-    width: 100%;
-    height: 2em;
-    color: $activeBack;
+            width: 100%;
+            height: 2em;
+            color: $activeBack;
         }
+
         form {
             width: 100%;
             @include columnCenter();
@@ -129,10 +147,9 @@ body {
 
             .closeCross {
                 position: absolute;
-                width: 30px;
-                height: 30px;
-                top: 0px;
-                right: 0px;
+                font-size: 2rem;
+                top: -2rem;
+                right: 1rem;
             }
         }
     }
@@ -154,8 +171,8 @@ h1 {
     flex-direction: column;
     padding: 2rem 2rem 2rem 2rem;
     background-color: $lightcolor;
-    border: 4px solid $lightcolor;
-    border-image: url("/images/math-dog.jpg") 30 round round;
+    border-bottom: 2px solid $color;
+
 
     input,
     button {
@@ -182,7 +199,7 @@ h1 {
     .capture__wrap {
         margin-bottom: 2rem;
         background-color: $activeBack;
-color: $lightcolor;
+        color: $lightcolor;
         padding: 20px;
 
         &__div {
@@ -207,7 +224,7 @@ color: $lightcolor;
     .bubble__wrap {
 
         background-color: $activeBack;
-color: $lightcolor;
+        color: $lightcolor;
         padding: 20px;
 
         &__div {
@@ -248,14 +265,14 @@ color: $lightcolor;
 
 .Background {
     .header {
-        background-image: url("../images/math-math-dog.jpg");
+        background-image: url("/images/math-math-dog.jpg");
         @include background();
     }
 
 
     color: $color;
     text-shadow: 2px 2px 5px $lightcolor;
-    font-family: "BalsamReg";
+    font-family: "BalsamReg", sans-serif;
 
 
     input,
@@ -268,12 +285,13 @@ color: $lightcolor;
 
 .newBackground {
     .header {
-        background-image: url("../images/math-dog.jpg");
+        background-image: url("/images/math-dog.jpg");
         @include background();
     }
 
 
-    font-family: "BalsamItal";
+    font-family: "BalsamItal", sans-serif;
+    font-style: italic;
     color: $backgroundColor;
     text-shadow: 2px 2px 5px $lightcolor;
 
@@ -284,28 +302,7 @@ color: $lightcolor;
     }
 
 
-    .form-wrapper {
-        width: calc(9em + 10vw);
 
-        color: $lightcolor;
-        background-color: $backgroundColor;
-
-        input {
-            background-color: $lightcolor;
-            border: 2px solid $lightcolor;
-            margin-bottom: 1rem;
-            border-radius: 1rem;
-            padding: 0.5rem;
-        }
-
-        z-index: 99;
-
-        form {
-            width: 100%;
-            @include columnCenter();
-            align-items: center;
-        }
-    }
 
     .main__count {
         align-items: flex-end;
@@ -314,7 +311,6 @@ color: $lightcolor;
     .capture__wrap {
 
         background-color: $backgroundColor;
-
         padding: 20px;
 
         &__div {
@@ -356,6 +352,7 @@ color: $lightcolor;
 
                     background-color: $lightcolor;
                     padding: 20px;
+
                 }
             }
         }
@@ -369,13 +366,15 @@ color: $lightcolor;
 .footer {
     @include flexRow();
     align-items: center;
-    border-image: url("/images/math-dog.jpg") 30 round round;
-padding: 1rem;
+
+    padding: 1rem;
+
     .section {
         background-color: rgba(255, 255, 255, 0.027);
         padding: 0;
-        border: rgba(255, 255, 255, 0);
-       
+        border-bottom: $lightcolor;
+
+
     }
 
     h4 {
@@ -391,5 +390,5 @@ padding: 1rem;
 
 .highlight {
     border: 10px solid $color;
-    
+
 }

@@ -22,6 +22,9 @@
         <header class="header">
             <h1>Have a fun with JS</h1>
             <div class="nav">
+                <a href="#">Home</a>
+                <a href="#events">Events</a>
+                <a href="#faq">FAQ</a>
                 <p onclick="showRegForm()" class="themeButton button">регистрация</p>
                 <p class="themeButton button" onclick="go()">Сменить тему</p>
             </div>
@@ -30,7 +33,7 @@
                 <div class="form-wrapper">
                     <h3>регистрируемся</h3>
                     <form>
-                        <div class="closeCross" onclick="CloseForm()">X</div>
+                        <div class="closeCross" onclick="CloseForm()">&#10007;</div>
                         <label for="userName">Имя: </label>
                         <input type="text" name="userName" placeholder="Введите имя" required />
                         <label for="login">Логин: </label>
@@ -59,7 +62,7 @@
                 </div>
 
             </div>
-            <div class="section events">
+            <div id="events" class="section events">
                 <h3>Всплытие и захват событий <br>
                     <span><i>Bubbling and capturing</i> </span></h3>
                 <div class="capture__wrap">
@@ -82,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="faq-wrapper">
+        <div id="faq" class="faq-wrapper">
             <h2 class="faq-quest">Стоит ли отказываться от jQuery?</h2>
             <div class="faq-answer displayNone">
                 <p>нативный JS не сложно освоить, тем более что весит он меньше и выполняет те же операции намного

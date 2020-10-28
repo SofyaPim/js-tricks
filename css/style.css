@@ -1,11 +1,11 @@
 @font-face {
   font-family: "BalsamReg";
-  src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
+  src: url("fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "BalsamItal";
-  src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
+  src: url("fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
   font-style: italic;
 }
 
@@ -20,15 +20,20 @@ body {
 
 .wrapper {
   font-family: "BalsamReg", sans-serif;
-  width: 90vw;
-  height: 100vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
   background-color: #eaf5f3;
-  margin: 0 auto;
+  border: 2px solid #173833;
 }
 
 .wrapper input,
 .wrapper button {
   font-size: calc(0.5em + 0.5vw);
+}
+
+.header {
+  margin-top: .5rem;
+  padding-top: 6rem;
 }
 
 .header,
@@ -48,7 +53,6 @@ body {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  border: 2px solid #d7eff7;
 }
 
 .header a img,
@@ -73,6 +77,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #173833;
+  margin-right: 1.5rem;
+}
+
+.nav a:hover {
+  color: #23caae;
 }
 
 .main {
@@ -134,10 +148,9 @@ body {
 
 .reg-auth__form .form-wrapper form .closeCross {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 0px;
-  right: 0px;
+  font-size: 2rem;
+  top: -2rem;
+  right: 1rem;
 }
 
 h1 {
@@ -157,9 +170,7 @@ h1 {
           flex-direction: column;
   padding: 2rem 2rem 2rem 2rem;
   background-color: #eaf5f3;
-  border: 4px solid #eaf5f3;
-  -o-border-image: url("/images/math-dog.jpg") 30 round round;
-     border-image: url("/images/math-dog.jpg") 30 round round;
+  border-bottom: 2px solid #173833;
 }
 
 .section input,
@@ -239,11 +250,11 @@ h1 {
 .Background {
   color: #173833;
   text-shadow: 2px 2px 5px #eaf5f3;
-  font-family: "BalsamReg";
+  font-family: "BalsamReg", sans-serif;
 }
 
 .Background .header {
-  background-image: url("../images/math-math-dog.jpg");
+  background-image: url("/images/math-math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -258,13 +269,14 @@ h1 {
 }
 
 .newBackground {
-  font-family: "BalsamItal";
+  font-family: "BalsamItal", sans-serif;
+  font-style: italic;
   color: #c2115b;
   text-shadow: 2px 2px 5px #eaf5f3;
 }
 
 .newBackground .header {
-  background-image: url("../images/math-dog.jpg");
+  background-image: url("/images/math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -276,38 +288,6 @@ h1 {
 .newBackground button {
   background-color: #c2115b;
   color: #173833;
-}
-
-.newBackground .form-wrapper {
-  width: calc(9em + 10vw);
-  color: #eaf5f3;
-  background-color: #c2115b;
-  z-index: 99;
-}
-
-.newBackground .form-wrapper input {
-  background-color: #eaf5f3;
-  border: 2px solid #eaf5f3;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  padding: 0.5rem;
-}
-
-.newBackground .form-wrapper form {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .newBackground .main__count {
@@ -373,15 +353,13 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -o-border-image: url("/images/math-dog.jpg") 30 round round;
-     border-image: url("/images/math-dog.jpg") 30 round round;
   padding: 1rem;
 }
 
 .footer .section {
   background-color: rgba(255, 255, 255, 0.027);
   padding: 0;
-  border: rgba(255, 255, 255, 0);
+  border-bottom: #eaf5f3;
 }
 
 .footer h4 {
