@@ -62,6 +62,7 @@ border: 2px solid $color;
 }
 
 .header {
+    background-image: url("../images/math-math-dog.jpg");
     margin-top: .5rem;
     padding-top: 6rem;
 }
@@ -265,7 +266,7 @@ h1 {
 
 .Background {
     .header {
-        background-image: url("/images/math-math-dog.jpg");
+       
         @include background();
     }
 
@@ -285,7 +286,7 @@ h1 {
 
 .newBackground {
     .header {
-        background-image: url("/images/math-dog.jpg");
+        background-image: url("../images/math-dog.jpg");
         @include background();
     }
 
