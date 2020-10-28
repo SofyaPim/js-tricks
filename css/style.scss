@@ -43,14 +43,16 @@ $activeBack:rgb(35, 202, 174);
 
 body {
     margin: 0 auto;
+    background-color: $lightcolor;
 
 }
 
 .wrapper {
     font-family: "BalsamReg", sans-serif;
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     background-color: $lightcolor;
+    margin: 0 auto;
 
     input,
     button {
@@ -65,7 +67,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    background: linear-gradient($backgroundColor, rgb(245, 242, 237));
+  
     border: $border;
 
     a img {
@@ -367,11 +369,13 @@ color: $lightcolor;
 .footer {
     @include flexRow();
     align-items: center;
-
+    border-image: url("/images/math-dog.jpg") 30 round round;
+padding: 1rem;
     .section {
         background-color: rgba(255, 255, 255, 0.027);
         padding: 0;
         border: rgba(255, 255, 255, 0);
+       
     }
 
     h4 {
