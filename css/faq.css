@@ -47,6 +47,7 @@
   background: #d7eff7;
   border: 5px solid #d7eff7;
   border-top: 0;
+  word-wrap: break-word;
 }
 
 .displayNone {
