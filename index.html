@@ -6,22 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/faq.css">
+    <title>funny JS</title>
 </head>
 
 <body>
     <div class="wrapper Background" id="theme">
         <header class="header">
-            <h1>Посчитайка</h1>
+            <h1>Have a fun with JS</h1>
             <div class="nav">
-
-
-                <p onclick="showRegForm()" class="themeButton">регистрация</p>
-
-
-
-
-                <p class="themeButton" onclick="go()">Сменить тему</p>
+                <p onclick="showRegForm()" class="themeButton button">регистрация</p>
+                <p class="themeButton button" onclick="go()">Сменить тему</p>
             </div>
             <div class="reg-auth__form">
 
@@ -30,14 +25,14 @@
                     <form>
                         <div class="closeCross" onclick="CloseForm()">X</div>
                         <label for="userName">Имя: </label>
-                        <input type="text" name="userName" placeholder="Введите имя" autofocus />
+                        <input type="text" name="userName" placeholder="Введите имя" required />
                         <label for="login">Логин: </label>
-                        <input name="login" type="text" placeholder="login" />
+                        <input name="login" type="text" placeholder="login" required/>
                         <label for="password">Пароль: </label>
-                        <input name="password" type="password" placeholder="password" /> 
+                        <input name="password" type="password" placeholder="password" required/> 
 
                         <label for="userEmail">Email: </label>
-                        <input type="email" name="userEmail" placeholder="Введите email" maxlength="11" />
+                        <input type="email" name="userEmail" placeholder="Введите email" maxlength="11" required/>
 
                         <h3>Укажите пол</h3>
 
@@ -46,54 +41,105 @@
 
                         <input type="radio" value="woman" name="gender" />женский
 
-                        <input type="submit" name="submit" size="20" onclick="SubmitForm()" class="submitForm" />
-                        <input type="reset" value="отмена" size="20" onclick="CloseForm()" class="closeForm">
+                        <input type="submit" name="submit" size="20" onclick="SubmitForm()" class="submitForm button" />
+                        <input type="reset" value="отмена" size="20" onclick="CloseForm()" class="closeForm button">
                     </form>
                 </div>
             </div>
         </header>
         <div class="main">
 
-            <div class="main__count">
-                <form>
+            <div class="section">
+                <h3>What`s about squere?</h3>
+                <div class="squereCount">
                     <input type="text" id="input" placeholder="Введите число!" class="textarea">
-                    <button onclick="getSquere()" class="countButton">cколько в квадрате</button>
+                    <button class="countButton button">cколько в квадрате</button>
                     <p class="res"></p>
-                </form>
+                </div>
 
             </div>
-            <div class="main__count">
-                <form>
-                    <h2>ваши вопросы и пожелания</h2>
-                    <input type="textarea" placeholder="введите текст" class="textarea">
-                    <input type="submit" value="отправить">
-                </form>
-
+            <div class="section events">
+                <h3>Всплытие и захват событий <br>
+                    <span><i>Bubbling and capturing</i> </span></h3>
+                <div class="capture__wrap">
+                    <div class="capture__wrap__div">
+                        <div class="capture__wrap__div__ul">
+                            <div class="capture__wrap__div__li">
+                                capture
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bubble__wrap">
+                    <div class="bubble__wrap__div">
+                        <div class="bubble__wrap__div__ul">
+                            <div class="bubble__wrap__div__li">
+                                bubble
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="h2"> википедия рядом</h2>
-
+<div class="section">
+    <h2 class="h2"> википедия рядом</h2>
+            <iframe src="https://wikipedia.com" rel="notFollow" class="search-in-wiki" >
+            </iframe>
+</div>
+            
 
 
         </div>
-        <iframe src="https://wikipedia.com" class="search-in-wiki">
-        </iframe>
-        <div class="header">
-            <div class="social-icons">
-                <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
-                        srcset=""> </a>
-                <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
-                        srcset=""></a>
-                <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
-                        srcset=""></a>
-                <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
-                        srcset=""></a>
+        <div class="faq-wrapper">
+            <h2 class="faq-quest">Стоит ли отказываться от jQuery?</h2>
+            <div class="faq-answer displayNone">
+                <p>нативный JS не сложно освоить, тем более что весит он меньше и  выполняет те же операции намного быстрее</p>
+            </div>
+            <h2 class="faq-quest">Как обойтись без $?</h2>
+            <div class="faq-answer displayNone">
+                <p>document.querySelector("selector") || document.querySelectorAll("selector");</p>
+            </div>
+            <h2 class="faq-quest">Чем заменить .next(),.prev(),.parent()?</h2>
+            <div class="faq-answer displayNone">
+                <p> elem.nextElementSibling, elem.previousElementSibling,elem.parentElement</p>
+            </div>
+            <h2 class="faq-quest">Чем заменить $(".elem").click(function(e) { /* code */ });?</h2>
+            <div class="faq-answer displayNone">
+                <p> document.querySelector(".elem").addEventListener("click", (e) => { /* code */ });</p>
+            </div>
+            <h2 class="faq-quest">Где узнать больше?</h2>
+            <div class="faq-answer displayNone">
+                <p> google
+                </p>
             </div>
         </div>
+    
+    <footer class="footer">
+        <div class="section">
+            <form>
+                <h4>ваши вопросы и пожелания</h4>
+                <input type="textarea" placeholder="введите текст" class="textarea" required>
+                <input type="submit" value="отправить" class="button">
+            </form>
+
+        </div>
+        <div class="social-icons">
+            <a href="" id="twitter"> <img src="https://image.flaticon.com/icons/png/512/124/124021.png" alt=""
+                    srcset=""> </a>
+            <a href="" id="fasebook"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""
+                    srcset=""></a>
+            <a href="" id="googleplus"><img src="https://image.flaticon.com/icons/png/512/124/124013.png" alt=""
+                    srcset=""></a>
+            <a href="" id="pinterest"><img src="https://image.flaticon.com/icons/png/512/124/124039.png" alt=""
+                    srcset=""></a>
+        </div>
+    </footer>
     </div>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/Theme.js"></script>
     <script src="scripts/count.js"></script>
+    <script src="scripts/faq.js"></script>
+    <script src="scripts/cupturing&bubbling.js"></script>
 </body>
 
 </html>

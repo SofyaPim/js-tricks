@@ -1,19 +1,24 @@
-@font-face{
+@font-face {
     font-family: "BalsamReg";
     src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("ttf");
 }
-@font-face{
+
+@font-face {
     font-family: "BalsamItal";
     src: url("/fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("ttf");
     font-style: italic;
 }
-$border:2px solid rgb(215, 239, 247);
-$backgroundColor: rgb(194, 111, 17);
-$color: rgb(21, 121, 104);
-$lightcolor:rgb(215, 239, 247);
 
-:root {    
-    font-size: calc(1em + 1vw);        
+$border:2px solid rgb(215, 239, 247);
+$backgroundColor: rgb(194, 17, 91);
+$color: rgb(21, 121, 104);
+$lightcolor:rgb(234, 245, 243);
+$activeBack:rgb(34, 78, 71);
+
+
+
+:root {
+    font-size: calc(1em + 1vw);
 }
 
 @mixin background () {
@@ -29,7 +34,11 @@ $lightcolor:rgb(215, 239, 247);
     flex-direction: column;
     justify-content: center;
 }
-
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 body {
     margin: 0 auto;
 
@@ -37,44 +46,42 @@ body {
 
 .wrapper {
     font-family: "BalsamReg", sans-serif;
-    width: 100vw;
+  width: 100vw;
     height: 100vh;
-    input, button{
+    background-color: $lightcolor;
+
+    input,
+    button {
         font-size: calc(0.5em + 0.5vw);
     }
 }
 
-.header {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+.header,
+.footer {
+   
+    @include flexRow();
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
     background: linear-gradient($backgroundColor, rgb(245, 242, 237));
-    padding: 1.5rem;
+border: $border;
 
     a img {
         width: 40px;
         height: 40px;
     }
 }
-.nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+.nav {
+    @include flexRow();
     align-items: baseline;
     justify-content: space-between;
 }
-.themeButton {
-    border: $border;
-    padding: 0.5rem;
 
-}
+
 
 .main {
     width: inherit;
-   
     position: relative;
 }
 
@@ -83,16 +90,20 @@ body {
 .reg-auth__form {
     display: none;
     position: absolute;
-    top:20%;
-     z-index: 99;
+    top: 20%;
+    z-index: 99;
+
     .form-wrapper {
-        width: calc(9em + 30vw);               
+        width: calc(9em + 30vw);
         background-color: $color;
         color: $lightcolor;
-        h3{
+
+        h3 {
             text-align: center;
         }
+
         filter: opacity(90%);
+
         input {
             background-color: $lightcolor;
             border: 2px solid $lightcolor;
@@ -100,22 +111,23 @@ body {
             border-radius: 1rem;
             padding: 0.5rem;
         }
-       
-        form{
-            width: 100%; 
+
+        form {
+            width: 100%;
             @include columnCenter();
-       align-items: center;
-       position: relative;
-       .closeCross{
-           position: absolute;
-           width: 30px;
-           height: 30px;
-           top:0px;
-           right: 0px;
-       }
+            align-items: center;
+            position: relative;
+
+            .closeCross {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 0px;
+                right: 0px;
+            }
         }
     }
-    
+
 }
 
 h1 {
@@ -123,25 +135,26 @@ h1 {
     text-shadow: 2px 2px 3px $lightcolor,
         -1px 1px 1px rgb(82, 87, 88);
     font-style: italic;
-    
+
 }
 
-.social-icons {
-    margin-top: 0.5%;
-}
 
-.main__count {
+
+.section {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+background-color: $lightcolor;
+border: 4px solid $lightcolor;
+border-image: url("/images/math-dog.jpg") 30 round round;
     input,
     button {
         background-color: $color;
         align-self: flex-start;
         text-align: center;
         border: 4px solid $border;
-        border-radius: 3rem;
-        padding: 1rem;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
     }
 
     .textarea {
@@ -149,35 +162,84 @@ h1 {
     }
 }
 
-.h2{
-  
-    text-shadow: 8px 8px  5px $lightcolor;
+.button:hover {
+    background-color: $activeBack;
+
+}
+.events{
+    
+ .capture__wrap{
+    
+background-color: $color;
+
+padding: 20px;
+&__div{
+    
+    background-color: $lightcolor;
+    padding: 20px;
+    &__ul{
+        
+        background-color: $color;
+        padding: 20px;
+        &__li{
+           
+            background-color: $lightcolor;
+            padding: 20px;
+        }
+    }
+}
+ }
+ .bubble__wrap{
+    
+    background-color: $color;
+    
+    padding: 20px;
+    &__div{
+        
+        background-color: $lightcolor;
+        padding: 20px;
+        &__ul{
+            
+            background-color: $color;
+            padding: 20px;
+            &__li{
+               
+                background-color: $lightcolor;
+                padding: 20px;
+            }
+        }
+    }
+     }
+}
+
+.h2 {
+
+    text-shadow: 8px 8px 5px $lightcolor;
     text-align: center;
     text-transform: uppercase;
     margin: 0;
 }
+
 .search-in-wiki {
-    width: 100vw;
-    height: 20vh;
-    background-color: $backgroundColor;
-}
+    width: 90vw;
+    height: 60vh;
 
-
-input[type="image"] {
-    width: 80px;
-    height: 40px;
-    margin-bottom: 0;
 }
 
 
 
 .Background {
-    background-image: url("../images/math-math-dog.jpg");
-    @include background();
+    .header{
+        background-image: url("../images/math-math-dog.jpg");
+       @include background();
+    }
+    
+   
     color: $color;
-    text-shadow: $backgroundColor;
+    text-shadow: 2px 2px 5px $lightcolor;
     font-family: "BalsamReg";
-    filter: opacity(90%);
+  
+
     input,
     button {
         background-color: $color;
@@ -187,24 +249,29 @@ input[type="image"] {
 }
 
 .newBackground {
-    background-image: url("../images/math-dog.jpg");
-    @include background();
- font-family: "BalsamItal";
+    .header{
+        background-image: url("../images/math-dog.jpg");
+      @include background();
+    }
+    
+  
+    font-family: "BalsamItal";
     color: $backgroundColor;
-filter: opacity(90%);
+    text-shadow: 2px 2px 5px $lightcolor;
+
     input,
     button {
         background-color: $backgroundColor;
         color: $color;
     }
-    .header{
-        background: linear-gradient($color, rgb(245, 242, 237));
-    }
+
+    
     .form-wrapper {
         width: calc(9em + 10vw);
-        
-       color: $lightcolor;
+
+        color: $lightcolor;
         background-color: $backgroundColor;
+
         input {
             background-color: $lightcolor;
             border: 2px solid $lightcolor;
@@ -212,14 +279,42 @@ filter: opacity(90%);
             border-radius: 1rem;
             padding: 0.5rem;
         }
+
         z-index: 99;
-        form{
-            width: 100%; 
+
+        form {
+            width: 100%;
             @include columnCenter();
-       align-items: center;
+            align-items: center;
         }
     }
-    .main__count{
+
+    .main__count {
         align-items: flex-end;
     }
+}
+
+.social-icons {
+    margin-top: 0.5%;
+}
+
+.footer {
+    @include flexRow();
+    align-items: center;
+    .section {
+        background-color: rgba(255, 255, 255, 0.027);
+        padding: 0;
+        border: rgba(255, 255, 255, 0);
+    }
+    h4{
+        margin: 0;
+    }
+}
+.themeButton {
+    border: $border;
+    padding: 0.5rem;
+
+}
+.highlight{
+    border: 10px solid $activeBack;
 }

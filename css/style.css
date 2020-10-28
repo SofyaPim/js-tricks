@@ -21,14 +21,16 @@ body {
   font-family: "BalsamReg", sans-serif;
   width: 100vw;
   height: 100vh;
+  background-color: #eaf5f3;
 }
 
-.wrapper input, .wrapper button {
+.wrapper input,
+.wrapper button {
   font-size: calc(0.5em + 0.5vw);
 }
 
-.header {
-  position: relative;
+.header,
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,17 +40,19 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c26f11), to(#f5f2ed));
-  background: linear-gradient(#c26f11, #f5f2ed);
-  padding: 1.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c2115b), to(#f5f2ed));
+  background: linear-gradient(#c2115b, #f5f2ed);
+  border: 2px solid #d7eff7;
 }
 
-.header a img {
+.header a img,
+.footer a img {
   width: 40px;
   height: 40px;
 }
@@ -71,11 +75,6 @@ body {
           justify-content: space-between;
 }
 
-.themeButton {
-  border: 2px solid #d7eff7;
-  padding: 0.5rem;
-}
-
 .main {
   width: inherit;
   position: relative;
@@ -91,7 +90,7 @@ body {
 .reg-auth__form .form-wrapper {
   width: calc(9em + 30vw);
   background-color: #157968;
-  color: #d7eff7;
+  color: #eaf5f3;
   -webkit-filter: opacity(90%);
           filter: opacity(90%);
 }
@@ -101,8 +100,8 @@ body {
 }
 
 .reg-auth__form .form-wrapper input {
-  background-color: #d7eff7;
-  border: 2px solid #d7eff7;
+  background-color: #eaf5f3;
+  border: 2px solid #eaf5f3;
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -137,15 +136,11 @@ body {
 h1 {
   -webkit-filter: saturate(100%);
           filter: saturate(100%);
-  text-shadow: 2px 2px 3px #d7eff7, -1px 1px 1px #525758;
+  text-shadow: 2px 2px 3px #eaf5f3, -1px 1px 1px #525758;
   font-style: italic;
 }
 
-.social-icons {
-  margin-top: 0.5%;
-}
-
-.main__count {
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,97 +148,136 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: #eaf5f3;
+  border: 4px solid #eaf5f3;
+  -o-border-image: url("/images/math-dog.jpg") 30 round round;
+     border-image: url("/images/math-dog.jpg") 30 round round;
 }
 
-.main__count input,
-.main__count button {
+.section input,
+.section button {
   background-color: #157968;
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: center;
   border: 4px solid 2px solid #d7eff7;
-  border-radius: 3rem;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
-.main__count .textarea {
-  background-color: #d7eff7;
+.section .textarea {
+  background-color: #eaf5f3;
+}
+
+.button:hover {
+  background-color: #224e47;
+}
+
+.events .capture__wrap {
+  background-color: #157968;
+  padding: 20px;
+}
+
+.events .capture__wrap__div {
+  background-color: #eaf5f3;
+  padding: 20px;
+}
+
+.events .capture__wrap__div__ul {
+  background-color: #157968;
+  padding: 20px;
+}
+
+.events .capture__wrap__div__ul__li {
+  background-color: #eaf5f3;
+  padding: 20px;
+}
+
+.events .bubble__wrap {
+  background-color: #157968;
+  padding: 20px;
+}
+
+.events .bubble__wrap__div {
+  background-color: #eaf5f3;
+  padding: 20px;
+}
+
+.events .bubble__wrap__div__ul {
+  background-color: #157968;
+  padding: 20px;
+}
+
+.events .bubble__wrap__div__ul__li {
+  background-color: #eaf5f3;
+  padding: 20px;
 }
 
 .h2 {
-  text-shadow: 8px 8px 5px #d7eff7;
+  text-shadow: 8px 8px 5px #eaf5f3;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
 }
 
 .search-in-wiki {
-  width: 100vw;
-  height: 20vh;
-  background-color: #c26f11;
-}
-
-input[type="image"] {
-  width: 80px;
-  height: 40px;
-  margin-bottom: 0;
+  width: 90vw;
+  height: 60vh;
 }
 
 .Background {
+  color: #157968;
+  text-shadow: 2px 2px 5px #eaf5f3;
+  font-family: "BalsamReg";
+}
+
+.Background .header {
   background-image: url("../images/math-math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-filter: blur(67%);
           filter: blur(67%);
-  color: #157968;
-  text-shadow: #c26f11;
-  font-family: "BalsamReg";
-  -webkit-filter: opacity(90%);
-          filter: opacity(90%);
 }
 
 .Background input,
 .Background button {
   background-color: #157968;
-  color: #c26f11;
+  color: #c2115b;
 }
 
 .newBackground {
+  font-family: "BalsamItal";
+  color: #c2115b;
+  text-shadow: 2px 2px 5px #eaf5f3;
+}
+
+.newBackground .header {
   background-image: url("../images/math-dog.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-filter: blur(67%);
           filter: blur(67%);
-  font-family: "BalsamItal";
-  color: #c26f11;
-  -webkit-filter: opacity(90%);
-          filter: opacity(90%);
 }
 
 .newBackground input,
 .newBackground button {
-  background-color: #c26f11;
+  background-color: #c2115b;
   color: #157968;
-}
-
-.newBackground .header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#157968), to(#f5f2ed));
-  background: linear-gradient(#157968, #f5f2ed);
 }
 
 .newBackground .form-wrapper {
   width: calc(9em + 10vw);
-  color: #d7eff7;
-  background-color: #c26f11;
+  color: #eaf5f3;
+  background-color: #c2115b;
   z-index: 99;
 }
 
 .newBackground .form-wrapper input {
-  background-color: #d7eff7;
-  border: 2px solid #d7eff7;
+  background-color: #eaf5f3;
+  border: 2px solid #eaf5f3;
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -270,5 +304,43 @@ input[type="image"] {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.social-icons {
+  margin-top: 0.5%;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .section {
+  background-color: rgba(255, 255, 255, 0.027);
+  padding: 0;
+  border: rgba(255, 255, 255, 0);
+}
+
+.footer h4 {
+  margin: 0;
+}
+
+.themeButton {
+  border: 2px solid #d7eff7;
+  padding: 0.5rem;
+}
+
+.highlight {
+  border: 10px solid #224e47;
 }
 /*# sourceMappingURL=style.css.map */
