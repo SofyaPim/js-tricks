@@ -1,0 +1,125 @@
+$border:2px solid rgb(215, 239, 247);
+$backgroundColor: rgb(194, 17, 91);
+$color: rgb(23, 56, 51);
+$lightcolor:rgb(234, 245, 243);
+$activeBack:rgb(35, 202, 174);
+
+.form-request {
+    display: flex;
+    justify-content: center;
+}
+
+.form-request-button-box-content {
+    cursor: pointer;
+    border: 2px solid $color;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.see {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-request-popup {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    left: 40%;
+    top: 10%;
+}
+
+.form-request-popup-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+
+    right: .5rem;
+    top: .5rem;
+    cursor: pointer;
+
+}
+
+.form-request-popup-content {
+    background-color: $lightcolor;
+    position: relative;
+    border: 3px solid $activeBack;
+    border-radius: .5rem;
+    padding: 20px;
+    width: calc(15rem + 2vw);
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+.alt_dark {
+    background-color: $color;
+    position: relative;
+    border: 3px solid $color;
+    padding: 20px;
+    width: calc(15rem + 2vw);
+    box-sizing: border-box;
+    color: $lightcolor;
+    transition: all 1s;
+}
+
+.alt_red {
+    background-color: $activeBack;
+    position: relative;
+    border: 3px solid $lightcolor;
+    padding: 20px;
+    width: calc(15rem + 2vw);
+    box-sizing: border-box;
+    color: white;
+    transition: all 1s;
+
+}
+
+
+
+
+
+
+.form-request-popup h3 {
+
+    color: $color;
+}
+
+.form-request-popup-content{
+  
+opacity: 95%;
+    form {
+        display: flex;
+        flex-direction: column;
+        
+  width: 100%;
+    margin-top: 10px;
+        input {
+            margin-bottom: 20px;
+            font-size: .5rem;
+            padding: .5rem 5rem;
+            align-self: center;
+            background-color: $lightcolor;
+            border: 1px solid $activeBack;
+        }
+
+        button[type="submit"] {
+
+            padding: 10px;
+            align-self: flex-end;
+            border: 2px solid $activeBack;
+            border-radius: .5rem;
+            margin-top: 50px;
+        }
+        textarea{
+            border: 2px solid $activeBack;
+            border-radius: .5rem;
+        }
+    }
+}

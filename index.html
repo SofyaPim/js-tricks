@@ -14,6 +14,7 @@
 <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/form-request.css">
     <title>funny JS</title>
 </head>
 
@@ -112,11 +113,30 @@
 
         <footer class="footer">
             <div class="section">
-                <form>
-                    <h4>ваши вопросы и пожелания</h4>
-                    <input type="textarea" placeholder="введите текст" class="textarea" required>
-                    <input type="submit" value="отправить" class="button">
-                </form>
+                
+                <div class="form-request">
+                    <div class="form-request-button-box">
+                        <div class="form-request-button-box-content">
+                           
+                            <div class="button">Отправьте нам вопрос <span>&#129300;</span></div>
+                        </div>
+                    </div>
+                    <div class="form-request-popup hidden">
+                        <div class="form-request-popup-content">
+                            <div class="form-request-popup-close">&#10007;</div>
+                            <h3>Напишите нам</h3>
+                            <form >
+                                <input type="text" name="fio" placeholder="ФИО" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                                <textarea name="comment" placeholder="Ваш комментарий" rows="10" required>
+                                </textarea>
+                                <button type="submit">Отправить</button>
+                                <div class="error-message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div class="social-icons">
@@ -137,6 +157,7 @@
     <script src="scripts/count.js"></script>
     <script src="scripts/faq.js"></script>
     <script src="scripts/cupturing&bubbling.js"></script>
+    <script src="scripts/form-request.js"></script>
 </body>
 
 </html>
